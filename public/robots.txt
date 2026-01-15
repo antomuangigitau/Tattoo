@@ -1,0 +1,5 @@
+# Spence Tattoos - Thika, Kenya
+User-agent: *
+Allow: /
+
+Sitemap: https://spencetattoos.netlify.app/sitemap.xml
