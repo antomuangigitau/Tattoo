@@ -1,6 +1,9 @@
 import logo from "../assets/Image_4-removebg-preview_1.webp";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect, startTransition } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { navLinks } from "../lib/links";
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
 import { cn } from "../lib/utils";
 import MobileNavbar from "./MobileNavbar";
 
@@ -9,44 +12,42 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const links = [
-    { name: "Work", href: "#gallery" },
-    { name: "Artist", href: "#artist" },
-    { name: "Process", href: "#process" },
-    { name: "FAQ", href: "#faq" },
-  ];
+  const location = useLocation();
+  const path = location.pathname;
 
-  // Handle scroll effects (background and active section spying)
+  const currentLinks = navLinks[path] || navLinks["default"];
+
   useEffect(() => {
     const handleScroll = () => {
-      // Navbar background
-      setScrolled(window.scrollY > 20);
+      startTransition(() => {
+        setScrolled(window.scrollY > 20);
 
-      // Scroll Spy Logic
-      const sections = links.map((link) => link.href.substring(1));
-      let current = "";
+        const sections = currentLinks
+          .filter((link) => link.href.startsWith("#"))
+          .map((link) => link.href.substring(1));
+        let current = "";
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          // If top of section is within the top third of viewport or if we've scrolled past it
-          if (rect.top <= window.innerHeight / 3) {
-            current = section;
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight / 3) {
+              current = section;
+            }
           }
         }
-      }
-      // Special case: if at top of page, clear active
-      if (window.scrollY < 100) current = "";
 
-      setActiveSection(current);
+        if (window.scrollY < 100) current = "";
+
+        setActiveSection(current);
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Remove dependency on links array to avoid re-binding
+  }, [currentLinks]);
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -66,17 +67,16 @@ const Navbar = () => {
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         scrolled
           ? "bg-background/90 backdrop-blur-md py-3 shadow-md border-b border-white/5"
-          : "bg-transparent py-4 md:py-6"
+          : "bg-transparent py-4 md:py-6",
       )}
       role="navigation"
       aria-label="Main Navigation">
       <div className="lg:container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="flex items-center group z-50 relative"
           aria-label="Spence Tattoos Home"
           onClick={closeMenu}>
-          {/* Responsive Logo */}
           <div className="relative h-10 w-10 md:h-16 md:w-16 lg:h-20 lg:w-20 overflow-hidden transition-all duration-300">
             <img
               src={logo}
@@ -94,11 +94,10 @@ const Navbar = () => {
               <span className="text-accent">.</span>
             </span>
           </div>
-        </a>
+        </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-6 lg:gap-8">
-          {links.map((link) => {
+          {currentLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
               <a
@@ -108,7 +107,7 @@ const Navbar = () => {
                   "text-sm uppercase tracking-wide transition-colors relative py-1",
                   isActive
                     ? "text-white font-medium"
-                    : "text-white/60 hover:text-white"
+                    : "text-white/60 hover:text-white",
                 )}
                 aria-current={isActive ? "page" : undefined}>
                 {link.name}
@@ -126,7 +125,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-white z-50 relative p-2 focus:outline-none focus:ring-2 focus:ring-accent rounded-md"
@@ -136,7 +134,11 @@ const Navbar = () => {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
-      <MobileNavbar isOpen={isOpen} closeMenu={closeMenu} />
+      <MobileNavbar
+        isOpen={isOpen}
+        closeMenu={closeMenu}
+        links={currentLinks}
+      />
     </nav>
   );
 };

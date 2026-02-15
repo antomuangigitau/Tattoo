@@ -55,9 +55,9 @@ const ContactFormInfo = ({
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="mb-12">
-          <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
+          <h2 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
             {title}
-          </h1>
+          </h2>
           {subtitle && (
             <p className="text-gray-400 text-base md:text-lg max-w-md">
               {subtitle}

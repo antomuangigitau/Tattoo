@@ -1,60 +1,68 @@
-import { Asterisk } from "lucide-react";
+import Asterisk from "lucide-react/dist/esm/icons/asterisk";
 
 const Artist = () => {
   return (
-    <section id="artist" className="py-24 bg-surface relative">
+    <section id="artist" className="py-16 md:py-24 bg-surface">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="relative group cursor-none">
-            <div className="absolute inset-0 bg-accent/20 translate-x-4 translate-y-4 border border-accent/30 transition-transform group-hover:translate-x-2 group-hover:translate-y-2" />
-            <img
-              src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?q=80&w=1000&auto=format&fit=crop"
-              alt="Spencer, the tattoo artist"
-              className="relative z-10 w-full h-150 object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          {/* Left Column - Image with overlaid text */}
+          <div className="relative">
+            {/* Main Artist Image */}
+            <div className="relative group w-full max-w-[456px] mx-auto">
+              <img
+                src="https://res.cloudinary.com/dex9sdigi/image/upload/v1769394944/Robbie_vaba8i.avif"
+                alt="Spencer, the tattoo artist"
+                className="w-full h-[500px] md:h-[600px] object-cover object-top"
+              />
+
+              {/* "Meet The Artist" - positioned on top right of image */}
+              <h2 className="absolute top-8 right-4 md:top-12 md:right-8 lg:-right-16 font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-right z-10">
+                Meet
+                <br />
+                The Artist
+              </h2>
+
+              {/* Artist Name - positioned at bottom left of image */}
+              <h3 className="absolute bottom-8 left-4 md:bottom-12 md:left-8 font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-wider z-10">
+                Spence
+              </h3>
+            </div>
           </div>
 
-          <div className="place-self-end">
-            <h4 className="text-white z-10 font-serif absolute top-22 left-2/5 capitalize text-7xl mb-4">
-              Meet <br />
-              The Artist
-            </h4>
-            <h2 className="z-10 absolute bottom-1/8 left-1/6 font-serif font-bold tracking-widest text-white uppercase text-4xl md:text-6xl mb-8 letter-spacing-wide">
-              Spence
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With over a decade of experience in fine-line and illustrative
-              blackwork, I believe a tattoo is a collaboration between memory
-              and skin. My studio is a sanctuary for those seeking art that ages
-              as gracefully as they do.
-            </p>
+          {/* Right Column - Description */}
+          <div className="flex flex-col justify-center space-y-6 lg:pl-8">
+            {[
+              {
+                desc: `Before tattooing, I filled sketchbooks with bold, abstract designs. Black ink felt powerful and timeless. My love for drawing evolved into an obsession with skin as a living canvas.`,
+              },
+              {
+                desc: `Tattooing is more than just skill. It requires discipline. I spent years honing clean lines and bold contrasts. In blackwork, every line has intention, making each piece unforgettable.`,
+              },
+              {
+                desc: `Now, I work from my private home studio, a space designed for focus and creativity. Here, clients feel comfortable and engaged in the process, ensuring every piece is meant to last a lifetime.`,
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex items-start">
+                <Asterisk className="w-5 h-5 mt-1 mr-3 shrink-0 text-muted-foreground" />
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
 
-            <div className="space-y-6">
-              {[
-                {
-                  desc: `Before the needle ever touches skin, my art begins in sketchbooks 
-      filled with bold, abstract designs. I have always believed that black 
-      ink is powerful and timeless. This lifelong love for drawing naturally 
-      evolved into an obsession with treating the skin as a living canvas, 
-      a philosophy at the very heart of my practice.`,
-                },
-                {
-                  desc: `Every session takes place in my private home studio. A space intentionally 
-      designed for focus and creativity. Here, clients can relax and feel engaged in 
-      a collaborative process, ensuring comfort and trust from the first consultation 
-      to the final result.`,
-                },
-                {
-                  desc: `Each design is created with bold, timeless intention and crafted through 
-      disciplined technique, ensuring not just beauty, but a piece truly meant to 
-      last a lifetime.`,
-                },
-              ].map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <Asterisk className="w-10 h-10 mt-1 mr-3 shrink-0 text-muted-foreground" />
-                  <p className="text-white text-sm">{item.desc}</p>
-                </div>
-              ))}
+            {/* Secondary Image with Badge */}
+            <div className="relative mt-8 w-[85%] sm:w-[60%] md:w-[50%] lg:w-[60%] self-end">
+              <img
+                src="https://res.cloudinary.com/dex9sdigi/image/upload/v1768832898/spence_rss90a.avif"
+                alt="Spence working on a tattoo"
+                className="w-full h-48 md:h-64 object-cover rounded-lg"
+              />
+              {/* Experience Badge */}
+              <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                <span className="text-black font-medium text-sm">
+                  10+ Years of Experience
+                </span>
+              </div>
             </div>
           </div>
         </div>

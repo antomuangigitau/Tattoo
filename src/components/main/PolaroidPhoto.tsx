@@ -1,6 +1,5 @@
 import StickyNote from "./StickyNote";
 import TapeStrip from "./TapeStrip";
-// Individual Polaroid Photo Component
 
 const PolaroidPhoto = ({
   image,
@@ -8,7 +7,7 @@ const PolaroidPhoto = ({
   stickyNote,
   rotation = 0,
   index,
-  alt, // Added alt prop
+  alt,
 }: PolaroidPhotoProps) => {
   const randomRotations = [-8, -4, -2, 2, 4, 6, 8, -6];
   const appliedRotation =

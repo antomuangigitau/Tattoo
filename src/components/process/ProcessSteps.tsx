@@ -13,9 +13,9 @@ const ProcessSteps = ({
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-4">
+          <h2 className="text-5xl md:text-7xl font-serif leading-tight mb-4">
             {title}
-          </h1>
+          </h2>
           {subtitle && (
             <p className="text-gray-400 text-sm md:text-base max-w-md">
               {subtitle}

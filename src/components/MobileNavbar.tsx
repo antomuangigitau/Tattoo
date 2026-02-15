@@ -1,11 +1,12 @@
-import { links } from "@/lib/links";
+import type { NavLink } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 interface MobileNavbarProps {
   isOpen: boolean;
   closeMenu: () => void;
+  links: NavLink[];
 }
-const MobileNavbar = ({ isOpen, closeMenu }: MobileNavbarProps) => {
+const MobileNavbar = ({ isOpen, closeMenu, links }: MobileNavbarProps) => {
   return (
     <div
       id="mobile-menu"

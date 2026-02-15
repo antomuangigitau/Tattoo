@@ -1,12 +1,12 @@
-import { Instagram } from "lucide-react";
+import Instagram from "lucide-react/dist/esm/icons/instagram";
 
 const Footer = () => (
   <footer className="bg-surface border-t border-white/5 py-12">
     <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="text-center md:text-left">
-        <h3 className="font-serif text-2xl font-bold tracking-widest">
+        <h2 className="font-serif text-2xl font-bold tracking-widest">
           SPENCE TATTOOS
-        </h3>
+        </h2>
         <p className="text-muted-foreground text-xs mt-2">
           © {new Date().getFullYear()} All Rights Reserved.
         </p>
@@ -14,9 +14,10 @@ const Footer = () => (
 
       <div className="flex gap-6">
         <a
-          href="#"
+          href="https://instagram.com/spence_tattoos_"
+          aria-label="Follow Spence Tattoos on Instagram"
           className="text-muted-foreground hover:text-white transition-colors">
-          <Instagram size={20} />
+          <Instagram size={20} aria-hidden="true" />
         </a>
       </div>
     </div>

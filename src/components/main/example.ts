@@ -1,7 +1,7 @@
 const examplePhotos: Photo[] = [
   {
     image:
-      "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768830091/sharzy_omtlwr.avif",
     date: "04.02.2023",
     stickyNote: {
       text: "A LOT OF DETAIL IN THIS ONE!",
@@ -11,42 +11,42 @@ const examplePhotos: Photo[] = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1590246814883-57c511ad2327?w=400&h=400&fit=crop",
-    date: "20.10.2022",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768836726/dad_love_j9k0du.avif",
+    date: "20.08.2025",
     stickyNote: {
-      text: "ADAM'S TATTOO!",
+      text: "ASHLEY'S TATTOO!",
       color: "yellow",
       position: "bottom",
     },
   },
   {
     image:
-      "https://images.unsplash.com/photo-1598541080405-8c5863a75154?w=400&h=400&fit=crop",
-    date: "16.12.2023",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768836388/piercing_1_p198ux.avif",
+    date: "13.08.2024",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1611501275019-9b5cda94e7d1?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768836930/tumbo_cat_njiwnd.avif",
     date: "07.02.2023",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1590246815049-bdbfb8887a5c?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768837083/back_piece_mptqv4.avif",
     date: "23.06.2023",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1588997708779-c06a3d4e7b63?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768837200/mummy_forever_kzynaf.avif",
     date: "25.11.2022",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1610032002722-92aac43e2ad4?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768837432/ear_piercing_rdhgrd.avif",
     date: "23.01.2023",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1598371611605-c3418b0b3b8c?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768837634/butterfly_jv38h6.avif",
     date: "01.09.2022",
     stickyNote: {
       text: "THANK YOU FOR THE TRUST!",
@@ -56,10 +56,10 @@ const examplePhotos: Photo[] = [
   },
   {
     image:
-      "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=400&h=400&fit=crop",
+      "https://res.cloudinary.com/dex9sdigi/image/upload/v1768837961/spence_stu_tpqzmx.avif",
     date: "15.03.2023",
     stickyNote: {
-      text: "FOR MAYA FROM TOKYO",
+      text: "THANK YOU STU!",
       color: "yellow",
       position: "bottom",
     },
