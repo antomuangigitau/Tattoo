@@ -1,93 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-QSZJ3FFR6Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- DNS Prefetch for external resources -->
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link rel="dns-prefetch" href="https://images.unsplash.com">
+      gtag("config", "G-QSZJ3FFR6Y");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
-  <!-- Font Preconnect & Load -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-    rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
+    <!-- Font Preconnect & Load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet">
-  </noscript>
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'" />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    </noscript>
 
-  <!-- Primary SEO -->
-  <title>Spence Tattoos | Professional Tattoo Artist in Thika, Kenya</title>
-  <meta name="description"
-    content="Professional tattoo artist in Thika, Kenya. Spence Tattoos offers custom fine-line, blackwork, and illustrative tattoos. Book your appointment at Clairbourn Towers, Kwame Nkrumah Street." />
-  <meta name="keywords"
-    content="tattoo Thika, tattoo artist Kenya, Spence Tattoos, custom tattoos Thika, blackwork tattoo Kenya, fine-line tattoo Thika, tattoo shop Thika" />
-  <meta name="author" content="Spence Tattoos" />
-  <meta name="robots" content="index, follow" />
+    <!-- Primary SEO -->
+    <title>Spence Tattoos | Professional Tattoo Artist in Thika, Kenya</title>
+    <meta
+      name="description"
+      content="Professional tattoo artist in Thika, Kenya. Spence Tattoos offers custom fine-line, blackwork, and illustrative tattoos. Book your appointment at Clairbourn Towers, Kwame Nkrumah Street." />
+    <meta
+      name="keywords"
+      content="tattoo Thika, tattoo artist Kenya, Spence Tattoos, custom tattoos Thika, blackwork tattoo Kenya, fine-line tattoo Thika, tattoo shop Thika" />
+    <meta name="author" content="Spence Tattoos" />
+    <meta name="robots" content="index, follow" />
 
-  <!-- Geo Tags for Local SEO -->
-  <meta name="geo.region" content="KE-13" />
-  <meta name="geo.placename" content="Thika" />
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="KE-13" />
+    <meta name="geo.placename" content="Thika" />
 
-  <!-- Canonical & Favicon -->
-  <link rel="canonical" href="https://spencetattoos.netlify.app/" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Canonical & Favicon -->
+    <link rel="canonical" href="https://spencetattoos.netlify.app/" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- Open Graph (Facebook, LinkedIn) -->
-  <meta property="og:title" content="Spence Tattoos | Professional Tattoo Artist in Thika, Kenya" />
-  <meta property="og:description"
-    content="Custom tattoos by Spence. Fine-line, blackwork & illustrative designs. Located in Thika, Kenya." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://spencetattoos.netlify.app/" />
-  <meta property="og:locale" content="en_KE" />
-  <meta property="og:site_name" content="Spence Tattoos" />
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Spence Tattoos | Professional Tattoo Artist in Thika, Kenya" />
+    <meta
+      property="og:description"
+      content="Custom tattoos by Spence. Fine-line, blackwork & illustrative designs. Located in Thika, Kenya." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spencetattoos.netlify.app/" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:site_name" content="Spence Tattoos" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Spence Tattoos | Thika, Kenya" />
-  <meta name="twitter:description" content="Professional custom tattoos in Thika. Book your appointment today." />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spence Tattoos | Thika, Kenya" />
+    <meta
+      name="twitter:description"
+      content="Professional custom tattoos in Thika. Book your appointment today." />
 
-  <!-- Structured Data (Local Business) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TattooParlor",
-      "name": "Spence Tattoos",
-      "description": "Professional tattoo artist specializing in fine-line and blackwork tattoos in Thika, Kenya",
-      "url": "https://spencetattoos.netlify.app",
-      "email": "leespenser5@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Kwame Nkrumah Street, Clairbourn Towers, 4th Floor Room D4",
-        "addressLocality": "Thika",
-        "addressCountry": "KE"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-1.0334",
-        "longitude": "37.0693"
-      },
-      "sameAs": ["https://instagram.com/spence_tattoos_"],
-      "priceRange": "$$",
-      "image": "https://spencetattoos.netlify.app/favicon.ico",
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "18:00"
+    <!-- Structured Data (Local Business) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "Spence Tattoos",
+        "description": "Professional tattoo artist specializing in fine-line and blackwork tattoos in Thika, Kenya",
+        "url": "https://spencetattoos.netlify.app",
+        "email": "leespenser5@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kwame Nkrumah Street, Clairbourn Towers, 4th Floor Room D4",
+          "addressLocality": "Thika",
+          "addressCountry": "KE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-1.0334",
+          "longitude": "37.0693"
+        },
+        "sameAs": ["https://instagram.com/spence_tattoos_"],
+        "priceRange": "$$",
+        "image": "https://spencetattoos.netlify.app/favicon.ico",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
       }
-    }
     </script>
-</head>
+  </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
