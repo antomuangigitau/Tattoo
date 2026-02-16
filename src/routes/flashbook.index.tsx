@@ -8,13 +8,13 @@ export const Route = createFileRoute("/flashbook/")({
 });
 
 const openingHours = [
-  { day: "Monday", hours: "10:00 - 20:00" },
-  { day: "Tuesday", hours: "10:00 - 20:00" },
-  { day: "Wednesday", hours: "10:00 - 20:00" },
-  { day: "Thursday", hours: "10:00 - 20:00" },
-  { day: "Friday", hours: "10:00 - 20:00" },
-  { day: "Saturday", hours: "10:00 - 20:00" },
-  { day: "Sunday", hours: "12:00 - 18:00" },
+  { day: "Monday", hours: "9:00 - 20:00" },
+  { day: "Tuesday", hours: "9:00 - 20:00" },
+  { day: "Wednesday", hours: "9:00 - 20:00" },
+  { day: "Thursday", hours: "9:00 - 20:00" },
+  { day: "Friday", hours: "9:00 - 20:00" },
+  { day: "Saturday", hours: "9:00 - 20:00" },
+  { day: "Sunday", hours: "11:00 - 19:00" },
 ];
 
 function Flashbook() {
@@ -74,7 +74,7 @@ function Flashbook() {
             ))}
           </ul>
           <a
-            href="#contact"
+            href="https://maps.app.goo.gl/MNcanxbMN59nPMjh6"
             className="block mt-6 text-center text-sm uppercase tracking-wider text-accent hover:text-white border-b border-accent pb-1 w-fit mx-auto transition-colors">
             Get Directions
           </a>
