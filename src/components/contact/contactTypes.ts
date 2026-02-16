@@ -16,6 +16,7 @@ export interface ContactFormData {
 export interface ContactFormProps {
   title: string;
   subtitle?: string;
+  isSubmit: boolean;
   contactInfo: ContactInfo[];
   onSubmit?: (data: ContactFormData) => void;
   className?: string;

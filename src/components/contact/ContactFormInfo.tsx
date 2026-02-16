@@ -12,7 +12,7 @@ const FormSchema = z.object({
     .max(50, "Name must be less than 50 characters")
     .regex(
       /^[a-zA-Z\s'-]+$/,
-      "Name can only contain letters, spaces, hyphens, and apostrophes"
+      "Name can only contain letters, spaces, hyphens, and apostrophes",
     ),
   phoneNumber: z
     .string()
@@ -24,6 +24,7 @@ const FormSchema = z.object({
 type FormInput = z.infer<typeof FormSchema>;
 
 const ContactFormInfo = ({
+  isSubmit,
   title,
   subtitle,
   contactInfo,
@@ -53,7 +54,6 @@ const ContactFormInfo = ({
       onSubmit={handleSubmit(handleFormSubmit)}
       className={`min-h-screen bg-black text-white p-8 md:p-16 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        {/* Title Section */}
         <div className="mb-12">
           <h2 className="text-5xl md:text-7xl font-serif leading-tight mb-6">
             {title}
@@ -65,19 +65,15 @@ const ContactFormInfo = ({
           )}
         </div>
 
-        {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Contact Info Cards */}
           <div className="space-y-6">
             {contactInfo.map((info, index) => (
               <ContactCard key={index} {...info} />
             ))}
           </div>
 
-          {/* Right Column - Form */}
           <div className="border border-gray-800 rounded-3xl p-8 md:p-10">
             <div className="space-y-6">
-              {/* Full Name Input */}
               <div>
                 <label
                   htmlFor="fullName"
@@ -93,7 +89,6 @@ const ContactFormInfo = ({
                 />
               </div>
 
-              {/* Phone Number Input */}
               <div>
                 <label
                   htmlFor="phoneNumber"
@@ -109,7 +104,6 @@ const ContactFormInfo = ({
                 />
               </div>
 
-              {/* Tattoo Idea Textarea */}
               <div>
                 <label
                   htmlFor="tattooIdea"
@@ -125,11 +119,10 @@ const ContactFormInfo = ({
                 />
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gray-200 hover:bg-white text-black font-medium py-4 rounded-full transition-colors duration-200">
-                Submit Information
+                className="w-full cursor-pointer bg-gray-200 hover:bg-white text-black font-medium py-4 rounded-full transition-colors duration-200">
+                {isSubmit ? "Submitting" : "Submit Information"}
               </button>
             </div>
           </div>
