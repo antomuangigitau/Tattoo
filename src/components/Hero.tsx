@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative pt-25 overflow-hidden">
       <div className="container flex justify-center mx-auto px-6 gap-12">
-        {/* Text Content */}
+
         <div className="z-10  order md:order-1 text-center animate-slide-up">
           <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl leading-[1.1] mb-8">
             Turn your <span className="italic text-gray-400">Skin</span>
@@ -22,11 +22,10 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {/* Visual Carousel (Tilted Cards) */}
+
       <CurvedMask />
 
-      {/* Background Gradient */}
-      {/* <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-surface to-transparent -z-10" /> */}
+
 
       <div className="flex justify-center gap-4 z-10 mb-12 animate-slide-up-delay">
         <a href="#contact">

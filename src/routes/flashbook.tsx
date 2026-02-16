@@ -1,4 +1,3 @@
-// routes/flashbook.tsx
 import { lazy, Suspense } from "react";
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 const FAQ = lazy(() => import("@/components/FAQ"));

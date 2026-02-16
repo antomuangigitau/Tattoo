@@ -34,7 +34,7 @@ const ContactFormInfo = ({
   const {
     register,
     handleSubmit,
-    // formState: { errors },
+
   } = useForm<FormInput>({
     resolver: zodResolver(FormSchema),
     defaultValues: {

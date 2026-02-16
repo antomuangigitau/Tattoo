@@ -23,7 +23,7 @@ const PhotoCard = ({ title, galleryImages, description }: PhotoCardProps) => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((img, index) => (
             <div

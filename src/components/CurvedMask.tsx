@@ -11,7 +11,7 @@ const images = [img1, img2, img3, img4, img5, img6, img7];
 const CurvedMask = () => {
   return (
     <div className="py-18 overflow-hidden">
-      {/* Desktop view */}
+
       <div className="hidden md:flex justify-center gap-4 overflow-hidden rounded-t-[15%] shadow-lg">
         {images.map((img, i) => (
           <img
@@ -28,7 +28,7 @@ const CurvedMask = () => {
         ))}
       </div>
 
-      {/* Mobile view - fixed size, no shrinking */}
+
       <div className="md:hidden">
         <div className="flex justify-center gap-4 overflow-hidden pb-4">
           {images.slice(0, 4).map((img, i) => (

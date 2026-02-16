@@ -7,7 +7,7 @@ const AccordionItem = ({
 }: AccordionItemProps) => {
   return (
     <div className="border border-gray-700 rounded-2xl md:rounded-[40px] overflow-hidden transition-all duration-300 hover:border-gray-600">
-      {/* Question Button */}
+
       <button
         onClick={onToggle}
         className="w-full px-5 py-5 md:px-8 md:py-6 flex items-center justify-between text-left hover:bg-gray-900/30 transition-colors duration-200">
@@ -15,7 +15,7 @@ const AccordionItem = ({
           {question}
         </span>
 
-        {/* Plus/Minus Icon */}
+
         <div className="shrink-0 w-7 h-7 md:w-8 md:h-8 rounded-full border border-gray-600 flex items-center justify-center transition-transform duration-300">
           <svg
             className={`w-3.5 h-3.5 md:w-4 md:h-4 transition-transform duration-300 ${isOpen ? "rotate-45" : ""

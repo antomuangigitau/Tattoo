@@ -1,4 +1,4 @@
-//flashbook.tsx
+
 import { createFileRoute } from "@tanstack/react-router";
 import ServiceCard from "@/components/flashbook/ServiceCard";
 import { services } from "@/lib/services";
@@ -20,7 +20,7 @@ const openingHours = [
 function Flashbook() {
   return (
     <section className="py-16 md:py-24">
-      {/* Hero Section */}
+
       <div className="container mx-auto px-6 text-center mb-12">
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
           Ink with <span className="italic text-gray-400">Intention</span>
@@ -33,7 +33,7 @@ function Flashbook() {
         </p>
       </div>
 
-      {/* Services Grid - 2x2 on all screens */}
+
       <div className="container mx-auto px-6 mb-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
           {services.map(({ title, image, galleryRoute, serviceType }) => (
@@ -48,7 +48,7 @@ function Flashbook() {
         </div>
       </div>
 
-      {/* Opening Hours */}
+
       <div className="container mx-auto px-6">
         <div className="max-w-md mx-auto bg-surface/95 rounded-2xl p-6 md:p-8">
           <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-2">

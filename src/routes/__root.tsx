@@ -1,4 +1,4 @@
-//__root.tsx
+
 import Navbar from "@/components/Navbar";
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 
@@ -17,7 +17,7 @@ const RootLayout = () => (
     <Suspense fallback={<div className="h-20" />}>
       <Footer />
     </Suspense>
-    {/* <TanStackRouterDevtools /> */}
+
   </div>
 );
 

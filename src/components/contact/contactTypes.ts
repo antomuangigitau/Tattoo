@@ -1,4 +1,4 @@
-// Type definitions
+
 import type { ComponentType } from "react";
 export interface ContactInfo {
   icon: ComponentType<{ className?: string }>;
@@ -22,9 +22,4 @@ export interface ContactFormProps {
   className?: string;
 }
 
-// export interface ContactCardProps {
-//   icon: ComponentType<{ className?: string }>;
-//   label: string;
-//   value: string;
-//   link?: string;
-// }
+

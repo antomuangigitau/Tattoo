@@ -11,7 +11,7 @@ const ProcessSteps = ({
       id="process"
       className={`min-h-screen  bg-surface p-8 md:p-16 ${className}`}>
       <div className="max-w-7xl mx-auto">
-        {/* Title Section */}
+
         <div className="mb-16">
           <h2 className="text-5xl md:text-7xl font-serif leading-tight mb-4">
             {title}
@@ -23,7 +23,7 @@ const ProcessSteps = ({
           )}
         </div>
 
-        {/* Timeline */}
+
         <div className="relative">
           {steps.map((step, index) => (
             <StepCard

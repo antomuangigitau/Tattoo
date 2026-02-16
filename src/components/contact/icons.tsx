@@ -1,4 +1,3 @@
-// Icons Components
 export const MailIcon = () => (
   <svg
     className="w-6 h-6 text-gray-400"

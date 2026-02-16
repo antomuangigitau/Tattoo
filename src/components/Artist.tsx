@@ -5,9 +5,14 @@ const Artist = () => {
     <section id="artist" className="py-16 md:py-24 bg-surface">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Image with overlaid text */}
+
           <div className="relative">
-            {/* Main Artist Image */}
+
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 md:mb-8 text-center lg:text-left">
+              Meet The Artist
+            </h2>
+
+
             <div className="relative group w-full max-w-[456px] mx-auto">
               <img
                 src="https://res.cloudinary.com/dex9sdigi/image/upload/v1769394944/Robbie_vaba8i.avif"
@@ -15,21 +20,14 @@ const Artist = () => {
                 className="w-full h-[500px] md:h-[600px] object-cover object-top"
               />
 
-              {/* "Meet The Artist" - positioned on top right of image */}
-              <h2 className="absolute top-8 right-4 md:top-12 md:right-8 lg:-right-16 font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-right z-10">
-                Meet
-                <br />
-                The Artist
-              </h2>
 
-              {/* Artist Name - positioned at bottom left of image */}
               <h3 className="absolute bottom-8 left-4 md:bottom-12 md:left-8 font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-wider z-10">
                 Spence
               </h3>
             </div>
           </div>
 
-          {/* Right Column - Description */}
+
           <div className="flex flex-col justify-center space-y-6 lg:pl-8">
             {[
               {
@@ -50,14 +48,14 @@ const Artist = () => {
               </div>
             ))}
 
-            {/* Secondary Image with Badge */}
+
             <div className="relative mt-8 w-[85%] sm:w-[60%] md:w-[50%] lg:w-[60%] self-end">
               <img
                 src="https://res.cloudinary.com/dex9sdigi/image/upload/v1768832898/spence_rss90a.avif"
                 alt="Spence working on a tattoo"
                 className="w-full h-48 md:h-64 object-cover rounded-lg"
               />
-              {/* Experience Badge */}
+
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 <span className="text-black font-medium text-sm">
                   10+ Years of Experience

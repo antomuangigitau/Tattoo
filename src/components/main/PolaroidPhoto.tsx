@@ -28,7 +28,7 @@ const PolaroidPhoto = ({
         <div className="bg-gray-200 aspect-square mb-3 overflow-hidden">
           <img
             src={image}
-            alt={alt || "Polaroid"} // Pass alt prop to img tag, with a fallback
+            alt={alt || "Polaroid"}
             className="w-full h-full object-cover"
           />
         </div>

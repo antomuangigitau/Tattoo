@@ -1,4 +1,3 @@
-// Tape Strip Component
 const TapeStrip = ({ position }: TapeStripProps) => {
   const positions = [
     "top-0 left-1/4 -translate-y-1/2 rotate-12",

@@ -54,7 +54,7 @@
   }
 }
 
-/* Film Grain Texture */
+
 .bg-noise {
   position: fixed;
   top: 0;
@@ -189,6 +189,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

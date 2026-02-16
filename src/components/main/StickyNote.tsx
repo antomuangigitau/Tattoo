@@ -1,4 +1,3 @@
-// Sticky Note Component
 
 const StickyNote = ({
   text,

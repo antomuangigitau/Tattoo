@@ -1,6 +1,5 @@
 import type { ContactInfo } from "./contactTypes";
 
-// Contact Card Component
 const ContactCard = ({ icon: Icon, label, value, link }: ContactInfo) => {
   const content = (
     <>
