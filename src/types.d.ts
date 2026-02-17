@@ -1,5 +1,5 @@
 declare global {
-  // Type definitions
+
   interface StickyNote {
     text: string;
     color?: "yellow" | "pink" | "blue" | "green";
@@ -39,8 +39,7 @@ declare global {
     stickyNote?: StickyNote;
   }
 
-  // Add other global types here as needed
-  // Type definitions
+
   interface ProcessStep {
     number: string;
     title: string;
@@ -60,5 +59,5 @@ declare global {
     isLast: boolean;
   }
 }
-// This is required for global declarations
+
 export { };

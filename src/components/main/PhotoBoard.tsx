@@ -21,7 +21,7 @@ const PhotoBoard = ({ title, photos, className = "" }: PhotoBoardProps) => {
         <Link
           to="/flashbook"
           className="text-accent hover:text-white transition-colors border-b border-accent pb-1 uppercase tracking-widest text-sm">
-          View Full Archive
+          View Gallery
         </Link>
       </div>
     </section>

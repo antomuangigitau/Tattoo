@@ -1,33 +1,25 @@
-import img1 from "@/assets/ai_modified.webp";
-import img2 from "@/assets/lion3.webp";
-import img3 from "@/assets/black.webp";
-import img4 from "@/assets/back.webp";
-import img5 from "@/assets/familia.webp";
-import img6 from "@/assets/familia_2.webp";
-import img7 from "@/assets/lion.webp";
-
-const images = [img1, img2, img3, img4, img5, img6, img7];
+import { images } from "@/lib/heroData";
 
 const CurvedMask = () => {
   return (
     <div className="py-18 overflow-hidden">
-
       <div className="hidden md:flex justify-center gap-4 overflow-hidden rounded-t-[15%] shadow-lg">
         {images.map((img, i) => (
           <img
             key={i}
-            src={img}
+            src={img.src}
+            srcSet={img.srcSet}
             alt={`Tattoo gallery work specimen ${i + 1}`}
             loading="lazy"
+            sizes="240px"
             style={{
               transform: "perspective(1000px) rotateX(2deg)",
               transformOrigin: "center top",
             }}
-            className="w-48 aspect-3/4 rounded-xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300"
+            className="w-48 aspect-3/4 object-cover rounded-xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300"
           />
         ))}
       </div>
-
 
       <div className="md:hidden">
         <div className="flex justify-center gap-4 overflow-hidden pb-4">
@@ -50,7 +42,9 @@ const CurvedMask = () => {
                 transformOrigin: "center top",
               }}>
               <img
-                src={img}
+                src={img.src}
+                srcSet={img.srcSet}
+                sizes="240px"
                 alt={`Tattoo gallery work specimen ${i + 1} (mobile view)`}
                 loading="lazy"
                 className="w-full aspect-3/4 object-cover"

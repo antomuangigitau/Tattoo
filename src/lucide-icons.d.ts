@@ -1,4 +1,4 @@
-// Type declarations for lucide-react direct path imports
+
 declare module "lucide-react/dist/esm/icons/menu" {
     import { LucideIcon } from "lucide-react";
     const Menu: LucideIcon;

@@ -1,4 +1,4 @@
-//flashbook/tattoo.tsx
+
 import PhotoCard from "@/components/flashbook/PhotoCard";
 import { createFileRoute } from "@tanstack/react-router";
 import { tattooImages } from "@/lib/photos";
