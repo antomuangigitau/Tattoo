@@ -5,28 +5,23 @@ const Artist = () => {
     <section id="artist" className="py-16 md:py-24 bg-surface">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-
           <div className="relative">
-
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 md:mb-8 text-center lg:text-left">
               Meet The Artist
             </h2>
 
-
-            <div className="relative group w-full max-w-[456px] mx-auto">
+            <div className="relative group w-full max-w-114 mx-auto">
               <img
                 src="https://res.cloudinary.com/dex9sdigi/image/upload/v1769394944/Robbie_vaba8i.avif"
-                alt="Spencer, the tattoo artist"
-                className="w-full h-[500px] md:h-[600px] object-cover object-top"
+                alt="Spence Tattoos – Professional Tattoo Artist and Tattoo Shop in Thika, Kenya"
+                className="w-full h-125 md:h-150 object-cover object-top"
               />
-
 
               <h3 className="absolute bottom-8 left-4 md:bottom-12 md:left-8 font-serif text-5xl md:text-7xl lg:text-8xl text-white tracking-wider z-10">
                 Spence
               </h3>
             </div>
           </div>
-
 
           <div className="flex flex-col justify-center space-y-6 lg:pl-8">
             {[
@@ -47,7 +42,6 @@ const Artist = () => {
                 </p>
               </div>
             ))}
-
 
             <div className="relative mt-8 w-[85%] sm:w-[60%] md:w-[50%] lg:w-[60%] self-end">
               <img

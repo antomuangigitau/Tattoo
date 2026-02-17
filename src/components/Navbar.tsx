@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className="relative h-10 w-10 md:h-16 md:w-16 lg:h-20 lg:w-20 overflow-hidden transition-all duration-300">
             <img
               src={logo}
-              alt="Spence Tattoos Logo"
+              alt="Spence Tattoos – Tattoo Artist and Tattoo Shop in Thika, Kenya"
               className="h-full w-full object-contain"
             />
           </div>
